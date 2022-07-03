@@ -1,0 +1,77 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <div id="kutu">
+        <table>
+            <tr>
+                <td>Birim Fiyatı:</td>
+                <td>
+                    <input type="text" id="B1" />
+                </td>
+            </tr>
+            <tr>
+                <td>Miktar</td>
+                <td>
+                    <input type="text" id="M1" />
+                </td>
+            </tr>
+
+
+            <tr>
+                <td></td>
+                <td>
+                    <input type="button" value="Toplam Tutar" id="button_hesapla" />
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>
+                    <span id="sonuc">00</span>
+                </td>
+            </tr>
+
+
+        </table>
+    </div>
+</body>
+<script>
+    let btnHesapla = document.getElementById('button_hesapla');
+
+    btnHesapla.onclick = function (e) {
+
+
+       
+        let b1 = document.getElementById('B1');
+        let m1 = document.getElementById('M1');
+        let i1 = document.getElementById('İ1');
+        let k1 = document.getElementById('K1');
+        
+
+        let toplam = parseInt(b1.value) + parseInt(m1.value);
+        
+        let s=document.getElementById('sonuc');
+        s.innerText=toplam;
+
+    };
+</script>
+
+</html>
+
+<style>
+    #kutu {
+        background-color: crimson;
+        width: 300px;
+        padding: 10px;
+        border-radius: 20px;
+    }
+
+    input[type='button'] {
+        width: 100%;
+        background-color: blanchedalmond;
+    }
+</style>
